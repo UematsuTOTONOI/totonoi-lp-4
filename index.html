@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOTONOI 富士山中湖｜本ページ限定 先行公開 1人5,000円OFF</title>
+<meta name="description" content="TOTONOI 富士山中湖 4周年記念 第2弾。本ページ限定・先行公開、1人5,000円OFF。富士山の絶景と貸切サウナで"ととのう"グランピング体験を。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#b88931;--gold-light:#d6ad61;--gold-pale:#e9d5a8;
+  --dark:#141210;--cream:#f4efe4;--cream-2:#efe8d8;--ink:#3a3226;
+  --serif-en:'Cormorant Garamond',serif;--serif-jp:'Noto Serif JP',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif-jp);color:var(--ink);background:var(--cream);line-height:1.8}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:linear-gradient(to bottom,rgba(10,8,5,.85),rgba(10,8,5,.45) 70%,transparent);transition:background .3s}
+.header.scrolled{background:rgba(10,8,5,.92)}
+.logo{color:#fff;line-height:1.15;text-align:center}
+.logo .en{font-family:var(--serif-en);font-size:26px;letter-spacing:.32em;font-weight:600}
+.logo .jp{font-size:12px;letter-spacing:.42em;display:block}
+.gnav{display:flex;align-items:center;gap:30px}
+.gnav a{color:#f4efe4;font-size:14px;letter-spacing:.18em;position:relative;padding:4px 0}
+.gnav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
+.gnav a:hover::after{width:100%}
+.btn-reserve{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:14px;letter-spacing:.14em;padding:11px 26px;border-radius:4px;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.35);transition:opacity .3s}
+.btn-reserve:hover{opacity:.85}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/hero.png') center/cover no-repeat;animation:kenburns 18s ease-out both}
+@keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,9,5,.78) 0%,rgba(12,9,5,.45) 45%,rgba(12,9,5,.15) 75%)}
+.hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:130px 0 70px}
+.anniv-logo{display:block;width:clamp(220px,36vw,420px);margin-bottom:18px}
+.hero-copy .limited{font-size:clamp(22px,3vw,34px);letter-spacing:.14em;font-weight:600;color:var(--gold-pale);text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;margin:6px 0 4px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.hero-price .prefix{font-size:clamp(24px,3vw,36px);letter-spacing:.08em}
+.hero-price .num{font-family:var(--serif-en);font-size:clamp(68px,10vw,118px);font-weight:600;line-height:1;background:linear-gradient(180deg,#f3e0b2,var(--gold-light) 60%,var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding:0 4px}
+.hero-price .unit{font-size:clamp(26px,3.4vw,40px);letter-spacing:.06em}
+.hero-price .off{font-size:clamp(30px,4.2vw,52px);font-weight:700;color:var(--gold-light);letter-spacing:.08em;margin-left:6px}
+.hero-price .tax{font-size:clamp(12px,1.3vw,15px);align-self:flex-start;margin-top:1.4em;letter-spacing:.1em}
+.coupon{display:inline-block;border:1px solid var(--gold-light);background:rgba(20,15,8,.45);padding:12px 30px;font-size:clamp(15px,1.8vw,20px);letter-spacing:.18em;color:var(--gold-pale);margin:18px 0 10px}
+.coupon b{color:#fff;letter-spacing:.24em}
+.coupon-note{font-size:clamp(12px,1.4vw,15px);letter-spacing:.16em;color:#efe8d8;margin-bottom:4px}
+.coupon-cond{font-size:clamp(12px,1.5vw,16px);letter-spacing:.14em;color:var(--gold-pale);margin-bottom:30px}
+.btn-main{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#e9cf94,var(--gold-light) 45%,var(--gold));color:#2b2010;font-size:clamp(15px,1.7vw,18px);font-weight:600;letter-spacing:.16em;padding:18px 44px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.btn-main .arrow{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#2b2010;color:var(--gold-light);font-size:13px}
+
+/* Concept */
+.concept{position:relative;overflow:hidden}
+.concept-bg{position:absolute;right:0;top:0;bottom:0;width:55%;background:url('images/concept.png') center/cover no-repeat}
+.concept-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--cream) 0%,rgba(244,239,228,.6) 30%,transparent 65%)}
+.concept-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:96px 0 72px}
+.concept h2{font-size:clamp(24px,3.2vw,36px);font-weight:600;letter-spacing:.1em;line-height:1.7;color:#2e2617;margin-bottom:28px}
+.concept p{max-width:560px;font-size:clamp(14px,1.5vw,16px);letter-spacing:.08em;color:#4d4433}
+
+/* Features */
+.features{width:min(1160px,92vw);margin:-8px auto 0;padding-bottom:80px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:1px solid #ddd2ba;background:#ddd2ba;gap:1px}
+.feature{background:#fbf8f0;padding:30px 26px;display:flex;gap:16px;align-items:flex-start}
+.feature .icon{flex:none;width:44px;height:44px;object-fit:contain}
+.feature h3{font-size:16px;letter-spacing:.1em;font-weight:600;color:#2e2617;margin-bottom:6px}
+.feature p{font-size:13.5px;letter-spacing:.06em;color:#5c5240;line-height:1.75}
+
+/* Cards */
+.more{width:min(1160px,92vw);margin:0 auto;padding-bottom:100px}
+.more-title{display:flex;align-items:center;gap:22px;justify-content:center;font-size:clamp(18px,2.4vw,26px);letter-spacing:.16em;font-weight:600;color:#2e2617;margin-bottom:44px}
+.more-title::before,.more-title::after{content:'';flex:none;width:min(120px,14vw);height:1px;background:linear-gradient(to right,transparent,var(--gold))}
+.more-title::after{background:linear-gradient(to left,transparent,var(--gold))}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+.card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:10/9;display:flex;align-items:flex-end;color:#fff;box-shadow:0 10px 30px rgba(40,30,10,.18);transition:transform .35s}
+.card:hover{transform:translateY(-5px)}
+.card .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}
+.card:hover .bg{transform:scale(1.05)}
+.card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,3,.85) 0%,rgba(8,6,3,.25) 45%,transparent 70%)}
+.card-body{position:relative;z-index:2;padding:24px 60px 24px 24px;width:100%}
+.card-body h3{font-size:clamp(18px,2vw,22px);letter-spacing:.14em;font-weight:600;margin-bottom:6px}
+.card-body p{font-size:13px;letter-spacing:.06em;color:#e8e2d4;line-height:1.7}
+.card .circle{position:absolute;right:20px;bottom:26px;z-index:2;width:36px;height:36px;border:1px solid var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:14px}
+
+/* Bottom CTA */
+.bottom-cta{position:relative;color:#fff;overflow:hidden}
+.bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/cta-bg.jpg') center/cover no-repeat}
+.bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.55)}
+.bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:76px 0;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.bottom-inner .anniv-logo{width:clamp(180px,28vw,340px);margin-bottom:8px}
+.bottom-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.bottom-price .limited{font-size:clamp(18px,2.4vw,28px);letter-spacing:.12em;font-weight:600;color:var(--gold-pale);margin-right:10px}
+.bottom-price .prefix{font-size:clamp(20px,2.4vw,28px)}
+.bottom-price .num{font-family:var(--serif-en);font-size:clamp(52px,7vw,86px);font-weight:600;line-height:1;background:linear-gradient(180deg,#f3e0b2,var(--gold-light) 60%,var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding:0 3px}
+.bottom-price .unit{font-size:clamp(20px,2.6vw,30px)}
+.bottom-price .off{font-size:clamp(24px,3.2vw,40px);font-weight:700;color:var(--gold-light);margin-left:4px}
+.bottom-price .tax{font-size:12px;align-self:flex-start;margin-top:1.2em}
+.bottom-coupon{margin-top:14px;font-size:clamp(13px,1.5vw,16px)}
+.bottom-coupon .coupon{margin:0 12px 8px 0;padding:9px 20px}
+.bottom-coupon .note{display:inline-block;letter-spacing:.12em;color:#efe8d8}
+.bottom-coupon .cond{display:block;margin-top:8px;letter-spacing:.12em;color:var(--gold-pale)}
+
+/* Footer */
+.footer{background:#0d0b08;color:#cfc7b4;padding:44px 4vw 30px}
+.footer-inner{width:min(1160px,100%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.footer .logo .en{font-size:22px}
+.fnav{display:flex;gap:26px;flex-wrap:wrap}
+.fnav a{font-size:12.5px;letter-spacing:.14em;transition:color .3s}
+.fnav a:hover{color:var(--gold-light)}
+.sns{display:flex;gap:14px}
+.sns a{width:34px;height:34px;border:1px solid #4c4434;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,color .3s}
+.sns a:hover{border-color:var(--gold-light);color:var(--gold-light)}
+.copyright{text-align:center;font-size:11px;letter-spacing:.12em;color:#8c8474;margin-top:30px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+
+/* Responsive */
+@media(max-width:860px){
+  .gnav{position:fixed;inset:0;background:rgba(10,8,5,.96);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .35s}
+  .gnav.open{transform:none}
+  .gnav a{font-size:17px}
+  .nav-toggle{display:block}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .concept-bg{width:100%;height:280px;position:relative}
+  .concept-bg::before{background:linear-gradient(to top,var(--cream),transparent 50%)}
+  .concept-inner{padding:30px 0 60px}
+  .bottom-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <a class="logo" href="#top"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  <nav class="gnav" id="gnav">
+    <a href="#plan">プラン</a><a href="#food">食事</a><a href="#sauna">サウナ</a><a href="#activity">過ごし方</a><a href="#access">アクセス</a>
+    <a class="btn-reserve" href="#reserve">ご予約はこちら</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" id="plan">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <img class="anniv-logo" src="images/anniv-logo.png" alt="4周年記念 第2弾">
+      <div class="hero-copy">
+        <p class="limited">本ページ限定 先行公開</p>
+        <p class="hero-price">
+          <span class="prefix">1人</span><span class="num">5,000</span><span class="unit">円</span><span class="off">OFF</span><span class="tax">（税込）</span>
+        </p>
+        <p class="coupon">クーポンコード：<b>TOTONOI5000</b></p>
+        <p class="coupon-note">予約時に入力で適用</p>
+        <p class="coupon-cond">※1泊2食付きプランのみご利用可</p>
+        <div class="hero-cta">
+          <a class="btn-main" href="#reserve">空室を確認する <span class="arrow">➜</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section class="concept">
+    <div class="concept-bg"></div>
+    <div class="concept-inner reveal">
+      <h2>安いだけじゃない。<br>富士山の絶景と"ととのい"を、もっと気軽に。</h2>
+      <p>TOTONOI 富士山中湖は、おかげさまで4周年。<br>"皆さまへの感謝と、もっと多くの方に自然の贅沢を体験してほしい"という想いから、<br>LP限定・特別価格でご案内するキャンペーンを実施中です。<br>この機会に、非日常の贅沢をもっと身近に。</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="access">
+    <div class="feature-grid reveal">
+      <div class="feature">
+        <img class="icon" src="images/icon-sauna.png" alt="">
+        <div><h3>貸切サウナ</h3><p>周りを気にせず"ととのう"贅沢を</p></div>
+      </div>
+      <div class="feature">
+        <img class="icon" src="images/icon-bus.png" alt="">
+        <div><h3>都心からのアクセス抜群</h3><p>新宿から車で約90分。直行バスでもらくらく到着</p></div>
+      </div>
+      <div class="feature">
+        <img class="icon" src="images/icon-fuji.png" alt="">
+        <div><h3>全室富士山ビュー</h3><p>お部屋やお風呂から絶景を独り占め</p></div>
+      </div>
+      <div class="feature">
+        <img class="icon" src="images/icon-nature.png" alt="">
+        <div><h3>広い専用ガーデン</h3><p>自然に囲まれたプライベート空間でのびのび</p></div>
+      </div>
+      <div class="feature">
+        <img class="icon" src="images/icon-campfire.png" alt="">
+        <div><h3>豊富なオプション</h3><p>飯盒炊飯・マシュマロ作りなどアウトドア体験が豊富</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More -->
+  <section class="more">
+    <h2 class="more-title reveal">TOTONOI 富士山中湖をもっと知る</h2>
+    <div class="card-grid">
+      <a class="card reveal" href="#food" id="food">
+        <span class="bg" style="background-image:url('images/food.jpg')"></span>
+        <div class="card-body"><h3>お食事</h3><p>地元食材をふんだんに使ったこだわりのグランピング料理</p></div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="#sauna" id="sauna">
+        <span class="bg" style="background-image:url('images/sauna.png')"></span>
+        <div class="card-body"><h3>サウナ</h3><p>貸切で楽しむ本格サウナで心と身体をととのえる</p></div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="#activity" id="activity">
+        <span class="bg" style="background-image:url('images/campfire.png');background-size:cover;background-position:center"></span>
+        <div class="card-body"><h3>TOTONOI でできること</h3><p>自然体験や季節のアクティビティで思い出に残るひとときを</p></div>
+        <span class="circle">➜</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta" id="reserve">
+    <span class="cta-bg"></span>
+    <div class="bottom-inner reveal">
+      <div>
+        <img class="anniv-logo" src="images/anniv-logo.png" alt="4周年記念 第2弾">
+        <p class="bottom-price">
+          <span class="limited">本ページ限定 先行公開</span>
+          <span class="prefix">1人</span><span class="num">5,000</span><span class="unit">円</span><span class="off">OFF</span><span class="tax">（税込）</span>
+        </p>
+        <p class="bottom-coupon">
+          <span class="coupon">クーポンコード：<b>TOTONOI5000</b></span>
+          <span class="note">予約時に入力で適用</span>
+          <span class="cond">※1泊2食付きプランのみご利用可</span>
+        </p>
+      </div>
+      <div>
+        <a class="btn-main" href="https://example.com/reserve" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="logo" href="#top"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+    <nav class="fnav">
+      <a href="#plan">プラン</a><a href="#food">食事</a><a href="#sauna">サウナ</a><a href="#activity">過ごし方</a><a href="#access">アクセス</a><a href="#">よくあるご質問</a><a href="#">ご利用案内</a><a href="#">会社概要</a><a href="#">お知らせ</a>
+    </nav>
+    <div class="sns"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="公式サイト">🔗</a></div>
+  </div>
+  <p class="copyright">&copy; TOTONOI 富士山中湖 All Rights Reserved.</p>
+</footer>
+
+<script>
+const h=document.getElementById('header');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>60),{passive:true});
+const t=document.getElementById('navToggle'),n=document.getElementById('gnav');
+t.addEventListener('click',()=>{t.classList.toggle('open');n.classList.toggle('open')});
+n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');n.classList.remove('open')}));
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');}}),{threshold:.15}).observe(document.querySelector('.reveal'));
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on')}}),{threshold:.15}).observe(el));
+</script>
+</body>
+</html>
