@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOTONOIでできること｜TOTONOI 富士山中湖</title>
+<meta name="description" content="TOTONOI 富士山中湖でできること。飯盒炊飯・マシュマロ作り・コーヒー焙煎などアウトドア体験や、焚き火・アニバーサリー装飾など特別な時間を。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#b88931;--gold-light:#d6ad61;--gold-pale:#e9d5a8;
+  --dark:#141210;--cream:#f4efe4;--cream-2:#efe8d8;--ink:#3a3226;
+  --serif-en:'Cormorant Garamond',serif;--serif-jp:'Noto Serif JP',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif-jp);color:var(--ink);background:var(--cream);line-height:1.8}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:linear-gradient(to bottom,rgba(10,8,5,.85),rgba(10,8,5,.45) 70%,transparent);transition:background .3s}
+.header.scrolled{background:rgba(10,8,5,.92)}
+.logo{color:#fff;line-height:1.15;text-align:center}
+.logo .en{font-family:var(--serif-en);font-size:26px;letter-spacing:.32em;font-weight:600}
+.logo .jp{font-size:12px;letter-spacing:.42em;display:block}
+.gnav{display:flex;align-items:center;gap:30px}
+.gnav a{color:#f4efe4;font-size:14px;letter-spacing:.18em;position:relative;padding:4px 0}
+.gnav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
+.gnav a:hover::after{width:100%}
+.btn-reserve{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:14px;letter-spacing:.14em;padding:11px 26px;border-radius:4px;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.35);transition:opacity .3s}
+.btn-reserve:hover{opacity:.85}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
+
+/* Hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/igloo-night.jpg') center/cover no-repeat;animation:kenburns 18s ease-out both}
+@keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,9,5,.8) 0%,rgba(12,9,5,.5) 42%,rgba(12,9,5,.18) 75%)}
+.hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:130px 0 70px}
+.hero-copy h1{font-size:clamp(24px,3.6vw,44px);letter-spacing:.06em;font-weight:600;line-height:1.5;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.hero-copy h2.sub{margin-top:8px;font-size:clamp(20px,3vw,34px);letter-spacing:.08em;font-weight:600;color:var(--gold-light);text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.hero-copy p.lead{margin-top:18px;font-size:clamp(13.5px,1.6vw,17px);letter-spacing:.06em;color:#efe8d8;text-shadow:0 2px 10px rgba(0,0,0,.5);max-width:560px}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap;margin-top:32px}
+.btn-main{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#e9cf94,var(--gold-light) 45%,var(--gold));color:#2b2010;font-size:clamp(14px,1.6vw,17px);font-weight:600;letter-spacing:.14em;padding:16px 38px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.btn-main .arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#2b2010;color:var(--gold-light);font-size:12px}
+
+/* Section title */
+.sec-title{display:flex;align-items:center;gap:10px;justify-content:center;font-size:clamp(17px,2.2vw,24px);letter-spacing:.1em;font-weight:600;color:#2e2617;margin-bottom:10px}
+.sec-note{text-align:center;font-size:12px;letter-spacing:.06em;color:#8a7f68;margin-bottom:36px}
+
+/* Outdoor options */
+.options{width:min(1160px,92vw);margin:0 auto;padding:96px 0 20px}
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.opt-card{background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;overflow:hidden;box-shadow:0 10px 26px rgba(60,44,14,.08)}
+.opt-card .photo{aspect-ratio:4/3;background-size:cover;background-position:center}
+.opt-card .body{padding:20px 22px 26px;text-align:center}
+.opt-card .icon{width:34px;height:34px;margin:0 auto 10px}
+.opt-card h3{font-size:16px;letter-spacing:.1em;font-weight:600;color:#2e2617;margin-bottom:8px}
+.opt-card p{font-size:13px;letter-spacing:.04em;color:#5c5240}
+
+/* Feature cards (large) */
+.feature-cards{width:min(1160px,92vw);margin:0 auto;padding:20px 0 60px}
+.fc-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:22px}
+.fc{position:relative;border-radius:6px;overflow:hidden;color:#fff;min-height:230px;display:flex;align-items:flex-end;box-shadow:0 12px 30px rgba(40,30,10,.18)}
+.fc .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.fc::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,3,.85) 0%,rgba(8,6,3,.25) 50%,transparent 75%)}
+.fc-body{position:relative;z-index:2;padding:24px 26px}
+.fc-body h3{font-size:clamp(16px,1.9vw,20px);letter-spacing:.1em;font-weight:600;margin-bottom:8px;line-height:1.6}
+.fc-body p{font-size:12.5px;letter-spacing:.04em;color:#e8e2d4;line-height:1.75}
+.fc-body .note{display:block;margin-top:8px;font-size:11px;color:var(--gold-pale)}
+.fc.tall{grid-row:1 / 3}
+
+/* Icon strip */
+.icon-strip{width:min(1160px,92vw);margin:0 auto;padding:0 0 100px}
+.strip-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;padding:26px 20px}
+.strip-item{display:flex;flex-direction:column;align-items:center;gap:8px;width:120px;text-align:center}
+.strip-item img{width:30px;height:30px;object-fit:contain}
+.strip-item span{font-size:12px;letter-spacing:.05em;color:#3a3226;line-height:1.6}
+
+/* Bottom CTA */
+.bottom-cta{position:relative;color:#fff;overflow:hidden}
+.bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/fuji-view.jpg') center/cover no-repeat}
+.bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.6)}
+.bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:80px 0;text-align:center}
+.bottom-inner h2{font-size:clamp(20px,2.8vw,30px);letter-spacing:.12em;font-weight:600;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.bottom-inner p{font-size:clamp(13px,1.5vw,16px);letter-spacing:.06em;color:var(--gold-pale);margin-bottom:34px}
+.bottom-inner .hero-cta{justify-content:center}
+
+/* Footer */
+.footer{background:#0d0b08;color:#cfc7b4;padding:44px 4vw 30px}
+.footer-inner{width:min(1160px,100%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.footer .logo .en{font-size:22px}
+.fnav{display:flex;gap:26px;flex-wrap:wrap}
+.fnav a{font-size:12.5px;letter-spacing:.14em;transition:color .3s}
+.fnav a:hover{color:var(--gold-light)}
+.sns{display:flex;gap:14px}
+.sns a{width:34px;height:34px;border:1px solid #4c4434;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,color .3s}
+.sns a:hover{border-color:var(--gold-light);color:var(--gold-light)}
+.copyright{text-align:center;font-size:11px;letter-spacing:.12em;color:#8c8474;margin-top:30px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+
+/* Responsive */
+@media(max-width:860px){
+  .gnav{position:fixed;inset:0;background:rgba(10,8,5,.96);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .35s}
+  .gnav.open{transform:none}
+  .gnav a{font-size:17px}
+  .nav-toggle{display:block}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .fc-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .fc.tall{grid-row:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  <nav class="gnav" id="gnav">
+    <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="activity.html">過ごし方</a><a href="index.html#access">アクセス</a>
+    <a class="btn-reserve" href="index.html#reserve">ご予約はこちら</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>旅の楽しみは、</h1>
+        <h2 class="sub">ととのうだけじゃない。TOTONOIでできること</h2>
+        <p class="lead">大切な人と過ごす、特別な時間。宿泊だけでなく、自然を感じる体験や思い出づくりもお楽しみいただけます。</p>
+        <div class="hero-cta">
+          <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outdoor options -->
+  <section class="options">
+    <h2 class="sec-title reveal">アウトドア体験オプション</h2>
+    <p class="sec-note">※オプション内容は季節により異なります。</p>
+    <div class="opt-grid">
+      <div class="opt-card reveal">
+        <div class="photo" style="background:linear-gradient(135deg,#5a3f22,#2a1c0d)"></div>
+        <div class="body">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#b88931" stroke-width="1.3"><path d="M4 10h16v2a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-2Z"/><path d="M6 10c0-3 2.5-5 6-5s6 2 6 5"/></svg>
+          <h3>飯盒炊飯</h3>
+          <p>みんなで火を囲み、炊きたてのご飯を。自然の中で味わう食事は格別です。</p>
+        </div>
+      </div>
+      <div class="opt-card reveal">
+        <div class="photo" style="background-image:url('images/campfire.png')"></div>
+        <div class="body">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#b88931" stroke-width="1.3"><circle cx="12" cy="8" r="3"/><path d="M9 8v9m6-9v9M6 20h12"/></svg>
+          <h3>マシュマロ作り</h3>
+          <p>外はカリッと、中はとろ〜り。お子様にも人気の焚き火スイーツ。</p>
+        </div>
+      </div>
+      <div class="opt-card reveal">
+        <div class="photo" style="background:linear-gradient(135deg,#6b4a26,#31210f)"></div>
+        <div class="body">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#b88931" stroke-width="1.3"><path d="M5 10h11v3a5 5 0 0 1-5 5H9a4 4 0 0 1-4-4v-4Zm11 2h1a2 2 0 0 1 0 4h-1M8 5v2m3-2v2m3-2v2"/></svg>
+          <h3>コーヒー焙煎</h3>
+          <p>自分だけのオリジナルブレンドを。香り豊かなコーヒーを楽しめます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature large cards -->
+  <section class="feature-cards">
+    <div class="fc-grid">
+      <div class="fc reveal">
+        <span class="bg" style="background-image:url('images/campfire.png')"></span>
+        <div class="fc-body">
+          <h3>広いお庭で<br>焚き火体験</h3>
+          <p>広々としたプライベートガーデンで、焚き火を囲みながら語らう時間。満点の星空の下、ゆったりとしたひとときをお過ごしいただけます。</p>
+        </div>
+      </div>
+      <div class="fc tall reveal">
+        <span class="bg" style="background-image:url('images/asema-exterior.jpg')"></span>
+        <div class="fc-body">
+          <h3>シャワー・エアコン<br>完備のお部屋</h3>
+          <p>清潔で快適なプライベート空間。シャワー・トイレ・エアコン完備で、季節を問わず快適にお過ごしいただけます。</p>
+        </div>
+      </div>
+      <div class="fc reveal">
+        <span class="bg" style="background:linear-gradient(135deg,#3a2418,#1a0f08)"></span>
+        <div class="fc-body">
+          <h3>カップルにおすすめ<br>アニバーサリー装飾</h3>
+          <p>特別な記念日を彩るアニバーサリー装飾をご用意。大切な人との思い出を、より素敵に演出します。<span class="note">（事前予約制・有料オプション）</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Icon strip -->
+  <section class="icon-strip">
+    <div class="strip-row reveal">
+      <div class="strip-item"><img src="images/icon-family.png" alt=""><span>家族旅行にも<br>おすすめ</span></div>
+      <div class="strip-item"><img src="images/icon-heart.png" alt=""><span>カップル利用に<br>人気</span></div>
+      <div class="strip-item"><img src="images/14.png" alt=""><span>自然体験が<br>充実</span></div>
+      <div class="strip-item"><img src="images/icon-airkon.png" alt=""><span>冷暖房完備で<br>快適ステイ</span></div>
+      <div class="strip-item"><img src="images/icon-camera.png" alt=""><span>写真映え<br>スポット多数</span></div>
+      <div class="strip-item"><img src="images/icon-sleep.png" alt=""><span>ゆったり<br>非日常時間</span></div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <span class="cta-bg"></span>
+    <div class="bottom-inner reveal">
+      <h2>富士山のふもとで、特別な時間を。</h2>
+      <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TOTONOI5000</p>
+      <div class="hero-cta">
+        <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+    <nav class="fnav">
+      <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="activity.html">過ごし方</a><a href="index.html#access">アクセス</a><a href="#">よくあるご質問</a><a href="#">ご利用案内</a><a href="#">会社概要</a><a href="#">お知らせ</a>
+    </nav>
+    <div class="sns"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="公式サイト">🔗</a></div>
+  </div>
+  <p class="copyright">&copy; TOTONOI 富士山中湖 All Rights Reserved.</p>
+</footer>
+
+<script>
+const h=document.getElementById('header');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>60),{passive:true});
+const t=document.getElementById('navToggle'),n=document.getElementById('gnav');
+t.addEventListener('click',()=>{t.classList.toggle('open');n.classList.toggle('open')});
+n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');n.classList.remove('open')}));
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.15}).observe(el));
+</script>
+</body>
+</html>
