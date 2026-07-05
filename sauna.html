@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>選べる2つの貸切サウナ｜TOTONOI 富士山中湖</title>
+<meta name="description" content="TOTONOI 富士山中湖の貸切サウナ。イグルーサウナとASEMAサウナ、2種の貸切サウナで極上のプライベートサウナ体験を。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#b88931;--gold-light:#d6ad61;--gold-pale:#e9d5a8;
+  --dark:#141210;--cream:#f4efe4;--cream-2:#efe8d8;--ink:#3a3226;
+  --serif-en:'Cormorant Garamond',serif;--serif-jp:'Noto Serif JP',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif-jp);color:var(--ink);background:var(--cream);line-height:1.8}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:linear-gradient(to bottom,rgba(10,8,5,.85),rgba(10,8,5,.45) 70%,transparent);transition:background .3s}
+.header.scrolled{background:rgba(10,8,5,.92)}
+.logo{color:#fff;line-height:1.15;text-align:center}
+.logo .en{font-family:var(--serif-en);font-size:26px;letter-spacing:.32em;font-weight:600}
+.logo .jp{font-size:12px;letter-spacing:.42em;display:block}
+.gnav{display:flex;align-items:center;gap:30px}
+.gnav a{color:#f4efe4;font-size:14px;letter-spacing:.18em;position:relative;padding:4px 0}
+.gnav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
+.gnav a:hover::after{width:100%}
+.btn-reserve{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:14px;letter-spacing:.14em;padding:11px 26px;border-radius:4px;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.35);transition:opacity .3s}
+.btn-reserve:hover{opacity:.85}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
+
+/* Hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/igloo-night.jpg') center/cover no-repeat;animation:kenburns 18s ease-out both}
+@keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,9,5,.8) 0%,rgba(12,9,5,.5) 42%,rgba(12,9,5,.18) 75%)}
+.hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:130px 0 70px}
+.hero-copy h1{font-size:clamp(28px,4.4vw,52px);letter-spacing:.06em;font-weight:600;line-height:1.5;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.hero-copy h1 span{color:var(--gold-light)}
+.hero-copy p.lead{margin-top:16px;font-size:clamp(14px,1.7vw,18px);letter-spacing:.1em;color:#efe8d8;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:14px 24px;margin-top:26px}
+.hero-badges span{display:flex;align-items:center;gap:8px;font-size:clamp(11.5px,1.3vw,14px);letter-spacing:.06em;color:#f4efe4}
+.hero-badges .dot{color:var(--gold-light);font-size:14px}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
+.btn-main{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#e9cf94,var(--gold-light) 45%,var(--gold));color:#2b2010;font-size:clamp(14px,1.6vw,17px);font-weight:600;letter-spacing:.14em;padding:16px 38px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.btn-main.outline{background:rgba(20,15,8,.35);border:1px solid var(--gold-light);color:var(--gold-pale)}
+.btn-main .arrow{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#2b2010;color:var(--gold-light);font-size:12px}
+.btn-main.outline .arrow{background:transparent;border:1px solid var(--gold-light);color:var(--gold-light)}
+
+/* Section title */
+.sec-title{display:flex;align-items:center;gap:22px;justify-content:center;font-size:clamp(19px,2.6vw,28px);letter-spacing:.16em;font-weight:600;color:#2e2617;margin-bottom:48px}
+.sec-title::before,.sec-title::after{content:'';flex:none;width:min(120px,14vw);height:1px;background:linear-gradient(to right,transparent,var(--gold))}
+.sec-title::after{background:linear-gradient(to left,transparent,var(--gold))}
+
+/* Two sauna compare */
+.compare{width:min(1160px,92vw);margin:0 auto;padding:96px 0 20px}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px}
+.sauna-card{background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;overflow:hidden;box-shadow:0 12px 32px rgba(60,44,14,.1)}
+.sauna-card .photo{position:relative;aspect-ratio:4/3;background-size:cover;background-position:center}
+.sauna-card .photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,4,.75),transparent 55%)}
+.sauna-card .photo h3{position:relative;z-index:2;color:#fff;font-size:clamp(20px,2.4vw,26px);letter-spacing:.16em;font-weight:600;padding:22px 24px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.sauna-card .body{padding:26px 28px 30px}
+.sauna-card .body p.desc{font-size:14px;letter-spacing:.05em;color:#5c5240;margin-bottom:20px}
+.spec-list{display:flex;flex-direction:column;gap:10px}
+.spec-row{display:flex;align-items:baseline;gap:14px;font-size:13.5px;letter-spacing:.05em}
+.spec-row .label{flex:none;display:flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;width:100px}
+.spec-row .val{color:#3a3226}
+
+/* Why chosen */
+.why{width:min(1160px,92vw);margin:0 auto;padding:20px 0 96px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.why-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;display:flex;align-items:flex-end;color:#fff;box-shadow:0 10px 26px rgba(40,30,10,.16)}
+.why-card .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.why-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,3,.88) 0%,rgba(8,6,3,.2) 55%,transparent 78%)}
+.why-body{position:relative;z-index:2;padding:22px 20px}
+.why-body h3{font-size:clamp(15px,1.7vw,17px);letter-spacing:.08em;font-weight:600;margin-bottom:8px}
+.why-body p{font-size:12.5px;letter-spacing:.03em;color:#e8e2d4;line-height:1.75}
+
+/* Bottom CTA */
+.bottom-cta{position:relative;color:#fff;overflow:hidden}
+.bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/fuji-view.jpg') center/cover no-repeat}
+.bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.6)}
+.bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:80px 0;text-align:center}
+.bottom-inner h2{font-size:clamp(22px,3vw,32px);letter-spacing:.14em;font-weight:600;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.bottom-inner p{font-size:clamp(13px,1.6vw,16px);letter-spacing:.08em;color:var(--gold-pale);margin-bottom:34px}
+.bottom-inner .hero-cta{justify-content:center}
+
+/* Footer */
+.footer{background:#0d0b08;color:#cfc7b4;padding:44px 4vw 30px}
+.footer-inner{width:min(1160px,100%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.footer .logo .en{font-size:22px}
+.fnav{display:flex;gap:26px;flex-wrap:wrap}
+.fnav a{font-size:12.5px;letter-spacing:.14em;transition:color .3s}
+.fnav a:hover{color:var(--gold-light)}
+.sns{display:flex;gap:14px}
+.sns a{width:34px;height:34px;border:1px solid #4c4434;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,color .3s}
+.sns a:hover{border-color:var(--gold-light);color:var(--gold-light)}
+.copyright{text-align:center;font-size:11px;letter-spacing:.12em;color:#8c8474;margin-top:30px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
+
+/* Responsive */
+@media(max-width:860px){
+  .gnav{position:fixed;inset:0;background:rgba(10,8,5,.96);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .35s}
+  .gnav.open{transform:none}
+  .gnav a{font-size:17px}
+  .nav-toggle{display:block}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  <nav class="gnav" id="gnav">
+    <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="index.html#activity">過ごし方</a><a href="index.html#access">アクセス</a>
+    <a class="btn-reserve" href="index.html#reserve">ご予約はこちら</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>富士山旅を、<br>もっと深く<span>"ととのえる"</span>。</h1>
+        <p class="lead">2種の貸切サウナで、極上のプライベートサウナ体験。</p>
+        <div class="hero-badges">
+          <span><span class="dot">◆</span>貸切90分</span>
+          <span><span class="dot">◆</span>水風呂・外気浴チェア完備</span>
+          <span><span class="dot">◆</span>天気が良い日は富士山を望める</span>
+          <span><span class="dot">◆</span>初心者にも安心</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn-main" href="index.html#plan">LP限定プランを見る <span class="arrow">➜</span></a>
+          <a class="btn-main outline" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="compare">
+    <h2 class="sec-title reveal">選べる2つの貸切サウナ</h2>
+    <div class="compare-grid">
+      <div class="sauna-card reveal">
+        <div class="photo" style="background-image:url('images/igloo-night.jpg')">
+          <h3>イグルーサウナ</h3>
+        </div>
+        <div class="body">
+          <p class="desc">ドーム型の形状が特徴的。<br>ロウリュの熱を感じやすく、やさしく包まれるような心地よさ。</p>
+          <div class="spec-list">
+            <div class="spec-row"><span class="label">🌡 温度</span><span class="val">70℃〜90℃</span></div>
+            <div class="spec-row"><span class="label">🕒 料金</span><span class="val">5,000円 / 90分</span></div>
+            <div class="spec-row"><span class="label">📅 利用時間</span><span class="val">15:30〜17:00 / 17:30〜19:00 / 19:30〜21:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sauna-card reveal">
+        <div class="photo" style="background-image:url('images/asema-exterior.jpg')">
+          <h3>ASEMAサウナ</h3>
+        </div>
+        <div class="body">
+          <p class="desc">トレーラー型の本格サウナ。<br>しっかり高温まで上がり、深い"ととのい"を楽しみたいサウナーにもおすすめ。</p>
+          <div class="spec-list">
+            <div class="spec-row"><span class="label">🌡 温度</span><span class="val">90℃〜110℃</span></div>
+            <div class="spec-row"><span class="label">🕒 料金</span><span class="val">5,000円 / 90分</span></div>
+            <div class="spec-row"><span class="label">📅 利用時間</span><span class="val">15:30〜17:00 / 17:30〜19:00 / 19:30〜21:00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why chosen -->
+  <section class="why">
+    <h2 class="sec-title reveal">TOTONOI のサウナが選ばれる理由</h2>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="bg" style="background-image:url('images/igloo-night.jpg')"></span>
+        <div class="why-body">
+          <h3>貸切90分</h3>
+          <p>他の人がいないから初心者でも入りやすい</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <span class="bg" style="background-image:url('images/fuji-view.jpg')"></span>
+        <div class="why-body">
+          <h3>富士山を望む外気浴スペース</h3>
+          <p>専用の外気浴ベッドも用意してあるのでゆっくり整える</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <span class="bg" style="background-image:url('images/sauna-interior.jpg')"></span>
+        <div class="why-body">
+          <h3>セルフロウリュ</h3>
+          <p>こだわって厳選したアロマ水を利用しデトックス</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <span class="cta-bg"></span>
+    <div class="bottom-inner reveal">
+      <h2>富士山を望む、極上のプライベートサウナへ。</h2>
+      <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TOTONOI5000</p>
+      <div class="hero-cta">
+        <a class="btn-main outline" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+    <nav class="fnav">
+      <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="index.html#activity">過ごし方</a><a href="index.html#access">アクセス</a><a href="#">よくあるご質問</a><a href="#">ご利用案内</a><a href="#">会社概要</a><a href="#">お知らせ</a>
+    </nav>
+    <div class="sns"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="公式サイト">🔗</a></div>
+  </div>
+  <p class="copyright">&copy; TOTONOI 富士山中湖 All Rights Reserved.</p>
+</footer>
+
+<script>
+const h=document.getElementById('header');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>60),{passive:true});
+const t=document.getElementById('navToggle'),n=document.getElementById('gnav');
+t.addEventListener('click',()=>{t.classList.toggle('open');n.classList.toggle('open')});
+n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');n.classList.remove('open')}));
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.15}).observe(el));
+</script>
+</body>
+</html>
