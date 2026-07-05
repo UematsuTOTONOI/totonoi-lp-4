@@ -73,6 +73,14 @@ a{text-decoration:none;color:inherit}
 .spec-row .label{flex:none;display:flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;width:100px}
 .spec-row .val{color:#3a3226}
 
+/* Badges */
+.badges{width:min(1160px,92vw);margin:0 auto;padding:0 0 20px}
+.badges-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;padding:26px 20px}
+.badge{display:flex;align-items:center;gap:12px;padding:6px 18px}
+.badge img{width:34px;height:34px;object-fit:contain;flex:none}
+.badge b{display:block;font-size:13.5px;letter-spacing:.06em;color:#2e2617}
+.badge span{display:block;font-size:11.5px;letter-spacing:.03em;color:#8a7f68;margin-top:2px}
+
 /* Why chosen */
 .why{width:min(1160px,92vw);margin:0 auto;padding:20px 0 96px}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
@@ -148,8 +156,7 @@ a{text-decoration:none;color:inherit}
           <span><span class="dot">◆</span>初心者にも安心</span>
         </div>
         <div class="hero-cta">
-          <a class="btn-main" href="index.html#plan">LP限定プランを見る <span class="arrow">➜</span></a>
-          <a class="btn-main outline" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+          <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
         </div>
       </div>
     </div>
@@ -193,24 +200,24 @@ a{text-decoration:none;color:inherit}
     <h2 class="sec-title reveal">TOTONOI のサウナが選ばれる理由</h2>
     <div class="why-grid">
       <div class="why-card reveal">
-        <span class="bg" style="background-image:url('images/igloo-night.jpg')"></span>
-        <div class="why-body">
-          <h3>貸切90分</h3>
-          <p>他の人がいないから初心者でも入りやすい</p>
-        </div>
-      </div>
-      <div class="why-card reveal">
         <span class="bg" style="background-image:url('images/fuji-view.jpg')"></span>
         <div class="why-body">
-          <h3>富士山を望む外気浴スペース</h3>
-          <p>専用の外気浴ベッドも用意してあるのでゆっくり整える</p>
+          <h3>富士山を感じる外気浴</h3>
+          <p>プライベートエリアからも富士山の眺望があり、富士山を見ながら外気浴を行うことが出来ます。また、外気浴専用チェアや屋外水風呂を用意しており、初心者から上級者の方まで楽しめる環境です。</p>
         </div>
       </div>
       <div class="why-card reveal">
         <span class="bg" style="background-image:url('images/sauna-interior.jpg')"></span>
         <div class="why-body">
-          <h3>セルフロウリュ</h3>
-          <p>こだわって厳選したアロマ水を利用しデトックス</p>
+          <h3>薪で火を起こしサウナストーブを温める</h3>
+          <p>電気やガスストーブの施設が多い中、TOTONOIは薪を燃やしサウナストーブを温めています。薪が燃える香りに加え、電気やガスでは体験できない柔らかい暑さを感じてください。</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <span class="bg" style="background-image:url('images/igloo-night.jpg')"></span>
+        <div class="why-body">
+          <h3>貸切で楽しめる特別な時間</h3>
+          <p>ご予約された方だけがサウナ棟に入室できるため、他のお客様と遭遇しません。初心者の方でも人の目を気にせず存分に楽しめます。料金も90分5,000円/1組と貸切サウナの中ではかなり抑えた内容です。</p>
         </div>
       </div>
     </div>
@@ -223,7 +230,7 @@ a{text-decoration:none;color:inherit}
       <h2>富士山を望む、極上のプライベートサウナへ。</h2>
       <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TOTONOI5000</p>
       <div class="hero-cta">
-        <a class="btn-main outline" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+        <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
       </div>
     </div>
   </section>
