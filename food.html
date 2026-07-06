@@ -25,7 +25,7 @@ a{text-decoration:none;color:inherit}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
 .nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
 .hero{position:relative;min-height:70vh;display:flex;align-items:center;color:#fff;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#241a10,#4a3620 55%,#1c1710)}
+.hero-bg{position:absolute;inset:0;background:url('images/food.jpg') center/cover no-repeat}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,9,5,.8) 0%,rgba(12,9,5,.4) 55%,rgba(12,9,5,.15) 80%)}
 .hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:130px 0 60px}
 .hero-copy .en{color:var(--gold-light);letter-spacing:.4em;font-size:13px;margin-bottom:12px}
@@ -38,7 +38,9 @@ a{text-decoration:none;color:inherit}
 .plans{width:min(1160px,92vw);margin:0 auto;padding:90px 0 20px}
 .plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
 .plan-card{background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;overflow:hidden;box-shadow:0 12px 30px rgba(60,44,14,.1)}
-.plan-card .photo{aspect-ratio:4/3;background:linear-gradient(135deg,#5a3f22,#241708)}
+.plan-card .photo{aspect-ratio:4/3;position:relative;overflow:hidden;background:#2a1c10}
+.photo .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease}
+.photo .slide.on{opacity:1}
 .plan-card .body{padding:26px 26px 30px}
 .plan-card h3{font-size:16px;letter-spacing:.06em;font-weight:600;color:#2e2617;line-height:1.6;text-align:center}
 .plan-card .price{text-align:center;font-family:var(--serif-en);font-size:34px;font-weight:600;color:var(--gold);margin:10px 0 16px}
@@ -49,7 +51,7 @@ a{text-decoration:none;color:inherit}
 .tags span{font-size:11.5px;letter-spacing:.03em;color:var(--gold);border:1px solid var(--gold-light);border-radius:999px;padding:5px 12px}
 .kids-note{width:min(1160px,92vw);margin:0 auto 90px;text-align:center;font-size:13px;letter-spacing:.04em;color:#5c5240;background:#fbf8f0;border:1px solid #e4d9be;border-radius:6px;padding:18px}
 .bottom-cta{position:relative;color:#fff;overflow:hidden}
-.bottom-cta .bg{position:absolute;inset:0;background:linear-gradient(120deg,#181209,#3a2c17 60%,#120d06)}
+.bottom-cta .bg{position:absolute;inset:0;background:url('images/cta-bg.jpg') center/cover no-repeat}
 .bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.5)}
 .bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:76px 0;text-align:center}
 .bottom-inner h2{font-size:clamp(20px,2.8vw,28px);letter-spacing:.1em;font-weight:600;margin-bottom:12px}
@@ -103,8 +105,12 @@ a{text-decoration:none;color:inherit}
     <h2 class="sec-title">選べるお食事プラン</h2>
     <div class="plan-grid">
 
-      <div class="plan-card">
-        <div class="photo"></div>
+        <div class="photo" data-slideshow>
+          <span class="slide on" style="background-image:url('images/bbq01.jpg')"></span>
+          <span class="slide" style="background-image:url('images/bbq03.jpg')"></span>
+          <span class="slide" style="background-image:url('images/bbq04.jpg')"></span>
+          <span class="slide" style="background-image:url('images/bbq05.jpg')"></span>
+        </div>
         <div class="body">
           <h3>地の食材をふんだんに使った<br>豪華BBQ</h3>
           <p class="price">8,800円</p>
@@ -123,7 +129,11 @@ a{text-decoration:none;color:inherit}
       </div>
 
       <div class="plan-card">
-        <div class="photo"></div>
+        <div class="photo" data-slideshow>
+          <span class="slide on" style="background-image:url('images/casualbbq01.jpg')"></span>
+          <span class="slide" style="background-image:url('images/casualbbq02.jpg')"></span>
+          <span class="slide" style="background-image:url('images/casualbbq03.jpg')"></span>
+        </div>
         <div class="body">
           <h3>手軽に贅沢✨カジュアルBBQ<br>〜お肉3種盛り&ぷりぷり海老と野菜のアヒージョを堪能〜</h3>
           <p class="price">6,600円</p>
@@ -139,7 +149,7 @@ a{text-decoration:none;color:inherit}
       </div>
 
       <div class="plan-card">
-        <div class="photo"></div>
+        <div class="photo" style="background-image:url('images/bfml.jpg');background-size:cover;background-position:center"></div>
         <div class="body">
           <h3>TOTONOIモーニング</h3>
           <p class="price">2,200円</p>
@@ -187,6 +197,10 @@ const h=document.getElementById('header');addEventListener('scroll',()=>h.classL
 const t=document.getElementById('navToggle'),n=document.getElementById('gnav');
 t.addEventListener('click',()=>{t.classList.toggle('open');n.classList.toggle('open')});
 n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');n.classList.remove('open')}));
+document.querySelectorAll('[data-slideshow]').forEach(box=>{
+  const slides=box.querySelectorAll('.slide');let i=0;
+  if(slides.length>1)setInterval(()=>{slides[i].classList.remove('on');i=(i+1)%slides.length;slides[i].classList.add('on')},3500);
+});
 </script>
 </body>
 </html>
