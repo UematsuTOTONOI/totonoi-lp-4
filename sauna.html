@@ -37,7 +37,7 @@ a{text-decoration:none;color:inherit}
 
 /* Hero */
 .hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('images/igloo-night.jpg') center/cover no-repeat;animation:kenburns 18s ease-out both}
+.hero-bg{position:absolute;inset:0;background:url('images/a1.png') center/cover no-repeat;animation:kenburns 18s ease-out both}
 @keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1)}}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,9,5,.8) 0%,rgba(12,9,5,.5) 42%,rgba(12,9,5,.18) 75%)}
 .hero-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:130px 0 70px}
@@ -93,7 +93,7 @@ a{text-decoration:none;color:inherit}
 
 /* Bottom CTA */
 .bottom-cta{position:relative;color:#fff;overflow:hidden}
-.bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/fuji-view.jpg') center/cover no-repeat}
+.bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/cta-bg.jpg') center/cover no-repeat}
 .bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.6)}
 .bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:80px 0;text-align:center}
 .bottom-inner h2{font-size:clamp(22px,3vw,32px);letter-spacing:.14em;font-weight:600;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
@@ -132,11 +132,14 @@ a{text-decoration:none;color:inherit}
 <body>
 
 <header class="header" id="header">
-  <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+  <a class="logo" href="index.html"><span class="jp">Glamping Village</span><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
   <nav class="gnav" id="gnav">
-    <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="index.html#activity">過ごし方</a><a href="index.html#access">アクセス</a>
-    <a class="btn-reserve" href="index.html#reserve">ご予約はこちら</a>
+    <a href="food.html">食事</a>
+    <a href="sauna.html">サウナ</a>
+    <a href="activity.html">楽しみ方</a>
+    <a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
+    <a class="btn-reserve" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">ご予約はこちら</a>
   </nav>
 </header>
 
@@ -156,7 +159,7 @@ a{text-decoration:none;color:inherit}
           <span><span class="dot">◆</span>初心者にも安心</span>
         </div>
         <div class="hero-cta">
-          <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+          <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
         </div>
       </div>
     </div>
@@ -167,7 +170,7 @@ a{text-decoration:none;color:inherit}
     <h2 class="sec-title reveal">選べる2つの貸切サウナ</h2>
     <div class="compare-grid">
       <div class="sauna-card reveal">
-        <div class="photo" style="background-image:url('images/igloo-night.jpg')">
+        <div class="photo" style="background-image:url('images/a9.png')">
           <h3>イグルーサウナ</h3>
         </div>
         <div class="body">
@@ -180,7 +183,7 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div class="sauna-card reveal">
-        <div class="photo" style="background-image:url('images/asema-exterior.jpg')">
+        <div class="photo" style="background-image:url('images/a6.png')">
           <h3>ASEMAサウナ</h3>
         </div>
         <div class="body">
@@ -200,21 +203,21 @@ a{text-decoration:none;color:inherit}
     <h2 class="sec-title reveal">TOTONOI のサウナが選ばれる理由</h2>
     <div class="why-grid">
       <div class="why-card reveal">
-        <span class="bg" style="background-image:url('images/fuji-view.jpg')"></span>
+        <span class="bg" style="background-image:url('images/a12.png')"></span>
         <div class="why-body">
           <h3>富士山を感じる外気浴</h3>
           <p>プライベートエリアからも富士山の眺望があり、富士山を見ながら外気浴を行うことが出来ます。また、外気浴専用チェアや屋外水風呂を用意しており、初心者から上級者の方まで楽しめる環境です。</p>
         </div>
       </div>
       <div class="why-card reveal">
-        <span class="bg" style="background-image:url('images/sauna-interior.jpg')"></span>
+        <span class="bg" style="background-image:url('images/a15.png')"></span>
         <div class="why-body">
           <h3>薪で火を起こしサウナストーブを温める</h3>
           <p>電気やガスストーブの施設が多い中、TOTONOIは薪を燃やしサウナストーブを温めています。薪が燃える香りに加え、電気やガスでは体験できない柔らかい暑さを感じてください。</p>
         </div>
       </div>
       <div class="why-card reveal">
-        <span class="bg" style="background-image:url('images/igloo-night.jpg')"></span>
+        <span class="bg" style="background-image:url('images/a11.png')"></span>
         <div class="why-body">
           <h3>貸切で楽しめる特別な時間</h3>
           <p>ご予約された方だけがサウナ棟に入室できるため、他のお客様と遭遇しません。初心者の方でも人の目を気にせず存分に楽しめます。料金も90分5,000円/1組と貸切サウナの中ではかなり抑えた内容です。</p>
@@ -228,9 +231,9 @@ a{text-decoration:none;color:inherit}
     <span class="cta-bg"></span>
     <div class="bottom-inner reveal">
       <h2>富士山を望む、極上のプライベートサウナへ。</h2>
-      <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TOTONOI5000</p>
+      <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TNNI42</p>
       <div class="hero-cta">
-        <a class="btn-main" href="index.html#reserve">空室を確認する <span class="arrow">➜</span></a>
+        <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
       </div>
     </div>
   </section>
@@ -239,9 +242,9 @@ a{text-decoration:none;color:inherit}
 
 <footer class="footer">
   <div class="footer-inner">
-    <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+    <a class="logo" href="index.html"><span class="jp">Glamping Village</span><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
     <nav class="fnav">
-      <a href="index.html#plan">プラン</a><a href="index.html#food">食事</a><a href="sauna.html">サウナ</a><a href="index.html#activity">過ごし方</a><a href="index.html#access">アクセス</a><a href="#">よくあるご質問</a><a href="#">ご利用案内</a><a href="#">会社概要</a><a href="#">お知らせ</a>
+      <a href="food.html">食事</a><a href="sauna.html">サウナ</a><a href="activity.html">楽しみ方</a><a href="privacy.html">プライバシーポリシー</a><a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
     </nav>
     <div class="sns"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="公式サイト">🔗</a></div>
   </div>
