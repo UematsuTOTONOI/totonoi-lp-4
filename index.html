@@ -16,6 +16,16 @@
   gtag('js', new Date());
   gtag('config', 'AW-18289857179');
 </script>
+  <!-- Event snippet for 予約ボタンのクリック conversion page -->
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('[href*="https://reserve.489ban.net/client/g-totonoi/0/detail/606610"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                gtag('event', 'conversion', {'send_to': 'AW-18289857179/U5c8CInPw9AcEJulpJFE'});
+            });
+        });
+    });
+</script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
