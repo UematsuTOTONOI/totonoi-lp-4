@@ -19,7 +19,7 @@
   <!-- Event snippet for 予約ボタンのクリック conversion page -->
 <script>
     window.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('[href*="https://reserve.489ban.net/client/g-totonoi/0/detail/606610"]').forEach(function(link) {
+        document.querySelectorAll('a[href^="https://reserve.489ban.net/"]').forEach(function(link) {
             link.addEventListener('click', function() {
                 gtag('event', 'conversion', {'send_to': 'AW-18289857179/U5c8CInPw9AcEJulpJFE'});
             });
@@ -35,8 +35,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOTONOI 富士山中湖｜本ページ限定 先行公開 1人5,000円OFF</title>
-<meta name="description" content="TOTONOI 富士山中湖 4周年記念 第2弾。本ページ限定・先行公開、1人5,000円OFF。富士山の絶景と貸切サウナで"ととのう"グランピング体験を。">
+<title>TOTONOI 富士山中湖｜秋旅応援キャンペーン 最大30%OFF</title>
+<meta name="description" content="TOTONOI 富士山中湖の秋旅応援キャンペーン。学生グループ最大30%OFF・早割15%OFF・連泊2泊目20%OFFなど全5プラン。富士山の絶景と貸切サウナで"ととのう"グランピング体験をお得に。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -51,7 +51,6 @@ html{scroll-behavior:smooth}
 body{font-family:var(--serif-jp);color:var(--ink);background:var(--cream);line-height:1.8}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-
 /* Header */
 .header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:linear-gradient(to bottom,rgba(10,8,5,.85),rgba(10,8,5,.45) 70%,transparent);transition:background .3s}
 .header.scrolled{background:rgba(10,8,5,.92)}
@@ -66,8 +65,6 @@ a{text-decoration:none;color:inherit}
 .btn-reserve:hover{opacity:.85}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;position:relative;z-index:110}
 .nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
-
-
 /* Hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('images/middle.jpg') center/cover no-repeat;animation:kenburns 18s ease-out both}
@@ -89,10 +86,11 @@ a{text-decoration:none;color:inherit}
 .coupon b{color:#fff;letter-spacing:.24em}
 .coupon-note{font-size:clamp(12px,1.4vw,15px);letter-spacing:.16em;color:#efe8d8;margin-bottom:4px}
 .coupon-cond{font-size:clamp(12px,1.5vw,16px);letter-spacing:.14em;color:var(--gold-pale);margin-bottom:30px}
+.plan-tags{display:flex;flex-wrap:wrap;gap:10px 14px;margin:16px 0 30px;list-style:none}
+.plan-tags li{font-size:clamp(12px,1.4vw,14px);letter-spacing:.08em;color:var(--gold-pale);border:1px solid rgba(214,173,97,.55);border-radius:999px;padding:7px 16px;background:rgba(20,15,8,.4)}
 .btn-main{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,#e9cf94,var(--gold-light) 45%,var(--gold));color:#2b2010;font-size:clamp(15px,1.7vw,18px);font-weight:600;letter-spacing:.16em;padding:18px 44px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s}
 .btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
 .btn-main .arrow{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#2b2010;color:var(--gold-light);font-size:13px}
-
 /* Concept */
 .concept{position:relative;overflow:hidden}
 .concept-bg{position:absolute;right:0;top:0;bottom:0;width:55%;background:url('images/tonp.jpg') center/cover no-repeat}
@@ -100,7 +98,6 @@ a{text-decoration:none;color:inherit}
 .concept-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:96px 0 72px}
 .concept h2{font-size:clamp(24px,3.2vw,36px);font-weight:600;letter-spacing:.1em;line-height:1.7;color:#2e2617;margin-bottom:28px}
 .concept p{max-width:560px;font-size:clamp(14px,1.5vw,16px);letter-spacing:.08em;color:#4d4433}
-
 /* Features */
 .features{width:min(1160px,92vw);margin:-8px auto 0;padding-bottom:80px}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border:1px solid #ddd2ba;background:#ddd2ba;gap:1px}
@@ -108,9 +105,16 @@ a{text-decoration:none;color:inherit}
 .feature .icon{flex:none;width:44px;height:44px;object-fit:contain}
 .feature h3{font-size:16px;letter-spacing:.1em;font-weight:600;color:#2e2617;margin-bottom:6px}
 .feature p{font-size:13.5px;letter-spacing:.06em;color:#5c5240;line-height:1.75}
-
+/* Plans (autumn campaign) */
+.plans{width:min(1160px,92vw);margin:0 auto;padding:90px 0 20px}
+.plans-title{display:flex;align-items:center;gap:22px;justify-content:center;font-size:clamp(18px,2.4vw,26px);letter-spacing:.16em;font-weight:600;color:#2e2617;margin-bottom:14px}
+.plans-title::before,.plans-title::after{content:'';flex:none;width:min(120px,14vw);height:1px;background:linear-gradient(to right,transparent,var(--gold))}
+.plans-title::after{background:linear-gradient(to left,transparent,var(--gold))}
+.plans-sub{text-align:center;font-size:clamp(13px,1.5vw,15px);letter-spacing:.1em;color:#5c5240;margin-bottom:44px}
+.badge{display:inline-block;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:12px;font-weight:700;letter-spacing:.06em;padding:5px 15px;border-radius:999px;margin-bottom:10px}
 /* Cards */
-.more{width:min(1160px,92vw);margin:0 auto;padding-bottom:100px}
+.more,.plans{width:min(1160px,92vw);margin-left:auto;margin-right:auto}
+.more{padding-bottom:100px}
 .more-title{display:flex;align-items:center;gap:22px;justify-content:center;font-size:clamp(18px,2.4vw,26px);letter-spacing:.16em;font-weight:600;color:#2e2617;margin-bottom:44px}
 .more-title .brk{display:none}
 @media(max-width:480px){.more-title .brk{display:inline}}
@@ -126,13 +130,11 @@ a{text-decoration:none;color:inherit}
 .card-body h3{font-size:clamp(18px,2vw,22px);letter-spacing:.14em;font-weight:600;margin-bottom:6px}
 .card-body p{font-size:13px;letter-spacing:.06em;color:#e8e2d4;line-height:1.7}
 .card .circle{position:absolute;right:20px;bottom:26px;z-index:2;width:36px;height:36px;border:1px solid var(--gold-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:14px}
-
 /* Bottom CTA */
 .bottom-cta{position:relative;color:#fff;overflow:hidden}
 .bottom-cta .cta-bg{position:absolute;inset:0;background:url('images/cta-bg.jpg') center/cover no-repeat}
 .bottom-cta::after{content:'';position:absolute;inset:0;background:rgba(10,8,4,.55)}
 .bottom-inner{position:relative;z-index:2;width:min(1160px,92vw);margin:0 auto;padding:76px 0;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
-
 .bottom-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
 .bottom-price .limited{font-size:clamp(18px,2.4vw,28px);letter-spacing:.12em;font-weight:600;color:var(--gold-pale);margin-right:10px}
 .bottom-price .prefix{font-size:clamp(20px,2.4vw,28px)}
@@ -142,11 +144,9 @@ a{text-decoration:none;color:inherit}
 .bottom-price .price-main{display:inline-flex;align-items:baseline;flex-wrap:nowrap;gap:2px}
 .bottom-price .tax{font-size:12px;align-self:flex-start;margin-top:1.2em}
 .bottom-coupon{margin-top:14px;font-size:clamp(13px,1.5vw,16px)}
-.bottom-coupon .coupon{margin:0 12px 8px 0;padding:9px 20px}
 .bottom-coupon .note{display:inline-block;letter-spacing:.12em;color:#efe8d8}
 .bottom-coupon .cond{display:block;margin-top:8px;letter-spacing:.12em;color:var(--gold-pale)}
-.bottom-coupon .exclude{display:block;margin-top:6px;font-size:10px;letter-spacing:.04em;color:#cfc4a6;line-height:1.6}
-
+.bottom-coupon .exclude{display:block;margin-top:6px;font-size:11px;letter-spacing:.04em;color:#cfc4a6;line-height:1.6}
 /* Footer */
 .footer{background:#0d0b08;color:#cfc7b4;padding:44px 4vw 30px}
 .footer-inner{width:min(1160px,100%);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
@@ -158,12 +158,10 @@ a{text-decoration:none;color:inherit}
 .sns a{width:34px;height:34px;border:1px solid #4c4434;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,color .3s}
 .sns a:hover{border-color:var(--gold-light);color:var(--gold-light)}
 .copyright{text-align:center;font-size:11px;letter-spacing:.12em;color:#8c8474;margin-top:30px}
-
 /* Reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .reveal.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-bg{animation:none}}
-
 /* Responsive */
 @media(max-width:860px){
   .gnav{position:fixed;inset:0;background:rgba(10,8,5,.96);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .35s}
@@ -181,50 +179,51 @@ a{text-decoration:none;color:inherit}
 </style>
 </head>
 <body>
-
 <header class="header" id="header">
   <a class="logo" href="#top"><span class="jp">Glamping Village</span><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
   <nav class="gnav" id="gnav">
+    <a href="#autumn-plans">秋旅プラン</a>
     <a href="food.html">食事</a>
     <a href="sauna.html">サウナ</a>
     <a href="activity.html">楽しみ方</a>
     <a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
-    <a class="btn-reserve" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">ご予約はこちら</a>
+    <a class="btn-reserve" href="https://www.yamanashi-sauna-glamping.com/news/autumn_plan_list/" target="_blank" rel="noopener">ご予約はこちら</a>
   </nav>
 </header>
-
 <main id="top">
-
   <!-- Hero -->
   <section class="hero" id="plan">
     <div class="hero-bg"></div>
     <div class="hero-inner">
-      <p class="anniv-text"><span class="orn">✦</span>4周年記念 第2弾<span class="orn">✦</span></p>
+      <p class="anniv-text"><span class="orn">✦</span>秋旅 応援キャンペーン<span class="orn">✦</span></p>
       <div class="hero-copy">
-        <p class="limited">本ページ限定 先行公開</p>
+        <p class="limited">この秋、富士山と"ととのう"を、もっとお得に</p>
         <p class="hero-price">
-          <span class="price-main"><span class="prefix">1人</span><span class="num">5,000</span><span class="unit">円</span></span><span class="off">OFF</span>
+          <span class="price-main"><span class="prefix">最大</span><span class="num">30</span><span class="unit">%</span></span><span class="off">OFF</span>
         </p>
-        <p class="coupon">クーポンコード：<b>TTNI42</b></p>
-        <p class="coupon-note">予約時に入力で適用</p>
-        <p class="coupon-cond">※1泊2食付きプランのみご利用可<br>※特定日除く</p>
+        <p class="coupon-note">学生グループ・家族旅行・早割・記念日・連泊 — 全5プラン開催中</p>
+        <ul class="plan-tags">
+          <li>学生グループ 最大30%OFF</li>
+          <li>早割 15%OFF</li>
+          <li>連泊2泊目〜 20%OFF</li>
+          <li>家族旅行 小学生以下無料</li>
+          <li>記念日 特典付き（1日2組限定）</li>
+        </ul>
         <div class="hero-cta">
-          <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
+          <a class="btn-main" href="https://www.yamanashi-sauna-glamping.com/news/autumn_plan_list/" target="_blank" rel="noopener">秋旅プランをチェックする <span class="arrow">➜</span></a>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Concept -->
   <section class="concept">
     <div class="concept-bg"></div>
     <div class="concept-inner reveal">
       <h2>安いだけじゃない。<br>富士山の絶景と”ととのい”を、もっと気軽に。</h2>
-      <p>TOTONOI 富士山中湖は、おかげさまで4周年。<br>"皆さまへの感謝と、もっと多くの方に自然の贅沢を体験してほしい"という想いから、このページ先行公開・特別価格でご案内するキャンペーンを実施中です。<br>この機会に、非日常の贅沢をもっと身近に。</p>
+      <p>TOTONOI 富士山中湖では、実りの秋にあわせて"秋旅応援キャンペーン"を開催中。<br>学生グループでの旅行から、ご家族、記念日のお二人、連泊でゆったり過ごしたい方まで、それぞれにうれしい5つのプランをご用意しました。<br>この機会に、非日常の贅沢をもっと身近に。</p>
     </div>
   </section>
-
   <!-- Features -->
   <section class="features" id="access">
     <div class="feature-grid reveal">
@@ -250,7 +249,58 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
   </section>
-
+  <!-- Autumn Plans -->
+  <section class="plans" id="autumn-plans">
+    <h2 class="plans-title reveal">秋旅 応援キャンペーン</h2>
+    <p class="plans-sub reveal">シーンに合わせて選べる、全5つのお得プラン</p>
+    <div class="card-grid">
+      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/detail/1325918" target="_blank" rel="noopener">
+        <span class="bg" style="background-image:url('images/campfire.jpg')"></span>
+        <div class="card-body">
+          <span class="badge">最大30%OFF</span>
+          <h3>学生グループ旅行応援プラン</h3>
+          <p>人数が増えるほどお得な素泊まりプラン。2名10%〜6名以上で最大30%OFF（学生証提示制）</p>
+        </div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/detail/1325976" target="_blank" rel="noopener">
+        <span class="bg" style="background-image:url('images/food.jpg')"></span>
+        <div class="card-body">
+          <span class="badge">小学生以下無料</span>
+          <h3>家族旅行応援プラン</h3>
+          <p>山梨グルメBBQ付きの1泊2食プラン。ご家族での富士山旅行を応援します</p>
+        </div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/detail/1282531" target="_blank" rel="noopener">
+        <span class="bg" style="background-image:url('images/middle.jpg')"></span>
+        <div class="card-body">
+          <span class="badge">15%OFF</span>
+          <h3>早割プラン</h3>
+          <p>60日前までの早期予約でお得に。富士山ビュー×貸切サウナも楽しめます</p>
+        </div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/detail/1282744" target="_blank" rel="noopener">
+        <span class="bg" style="background-image:url('images/tonp.jpg')"></span>
+        <div class="card-body">
+          <span class="badge">特典付き（1日2組限定）</span>
+          <h3>記念日旅行プラン</h3>
+          <p>バルーン・スパークリング・ケーキ付きで、大切な記念日を特別な一日に</p>
+        </div>
+        <span class="circle">➜</span>
+      </a>
+      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/detail/1282692" target="_blank" rel="noopener">
+        <span class="bg" style="background-image:url('images/sauna.jpg')"></span>
+        <div class="card-body">
+          <span class="badge">2泊目以降20%OFF</span>
+          <h3>連泊プラン</h3>
+          <p>泊まるほどお得に。連泊でゆったりとした秋の富士山中湖時間を</p>
+        </div>
+        <span class="circle">➜</span>
+      </a>
+    </div>
+  </section>
   <!-- More -->
   <section class="more">
     <h2 class="more-title reveal">TOTONOI <br>富士山中湖<br>をもっと知る</h2>
@@ -272,32 +322,28 @@ a{text-decoration:none;color:inherit}
       </a>
     </div>
   </section>
-
   <!-- Bottom CTA -->
   <section class="bottom-cta" id="reserve">
     <span class="cta-bg"></span>
     <div class="bottom-inner reveal">
       <div>
-        <p class="anniv-text bottom"><span class="orn">✦</span>4周年記念 第2弾<span class="orn">✦</span></p>
+        <p class="anniv-text bottom"><span class="orn">✦</span>秋旅 応援キャンペーン<span class="orn">✦</span></p>
         <p class="bottom-price">
-          <span class="limited">本ページ限定 先行公開</span>
-          <span class="price-main"><span class="prefix">1人</span><span class="num">5,000</span><span class="unit">円</span></span><span class="off">OFF</span>
+          <span class="limited">この秋、お得に"ととのう"</span>
+          <span class="price-main"><span class="prefix">最大</span><span class="num">30</span><span class="unit">%</span></span><span class="off">OFF</span>
         </p>
         <p class="bottom-coupon">
-          <span class="coupon">クーポンコード：<b>TTNI42</b></span>
-          <span class="note">予約時に入力で適用</span>
-          <span class="cond">※1泊2食付きプランのみご利用可<br>※特定日除く※11月30日チェックインまで</span>
-          <span class="exclude">【クーポン除外日】7月 11,18,21,23,25,28,29,31日　8月 1〜5,8〜17,22〜25,28〜30日　9月 5,12,19〜22,26日　10月 10,11日</span>
+          <span class="note">学生グループ・家族旅行・早割・記念日・連泊、全5プランからお選びいただけます</span>
+          <span class="cond">学生グループ 最大30%OFF ／ 早割 15%OFF ／ 連泊2泊目〜 20%OFF ／ 家族旅行 小学生以下無料 ／ 記念日 特典付き</span>
+          <span class="exclude">※プランごとに対象期間・条件・除外日が異なります。詳細は各プランページをご確認ください。</span>
         </p>
       </div>
       <div>
-        <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
+        <a class="btn-main" href="https://www.yamanashi-sauna-glamping.com/news/autumn_plan_list/" target="_blank" rel="noopener">秋旅プランをチェックする <span class="arrow">➜</span></a>
       </div>
     </div>
   </section>
-
 </main>
-
 <footer class="footer">
   <div class="footer-inner">
     <a class="logo" href="#top"><span class="jp">Glamping Village</span><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
@@ -308,13 +354,11 @@ a{text-decoration:none;color:inherit}
   </div>
   <p class="copyright">&copy; TOTONOI 富士山中湖 All Rights Reserved.</p>
 </footer>
-
 <script>
 const h=document.getElementById('header');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>60),{passive:true});
 const t=document.getElementById('navToggle'),n=document.getElementById('gnav');
 t.addEventListener('click',()=>{t.classList.toggle('open');n.classList.toggle('open')});
 n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');n.classList.remove('open')}));
-new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');}}),{threshold:.15}).observe(document.querySelector('.reveal'));
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on')}}),{threshold:.15}).observe(el));
 </script>
 </body>
