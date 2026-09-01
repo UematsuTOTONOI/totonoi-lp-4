@@ -434,6 +434,7 @@
        Features
     --------------------------------- */
     .features{position:relative;padding:12px 0 110px;background:var(--ivory)}
+    .features-head{display:none}
     .feature-grid{
       width:min(1180px,91vw);
       margin:0 auto;
@@ -656,23 +657,27 @@
       .nav-toggle.open span:nth-child(2){opacity:0}
       .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-      .hero{min-height:850px;align-items:flex-end}
-      .hero-bg{inset:0;background-position:62% center}
-      .hero::before{background:linear-gradient(to top,rgba(8,7,5,.96) 2%,rgba(8,7,5,.7) 43%,rgba(8,7,5,.2) 76%,rgba(8,7,5,.35) 100%)}
-      .hero-inner{width:min(92vw,680px);padding:125px 0 78px}
+      .hero{min-height:820px;align-items:flex-end}
+      .hero-bg{inset:0;background-position:48% 50%;transform:scale(1.015)}
+      .hero::before{
+        background:
+          linear-gradient(90deg,rgba(8,7,5,.18) 0%,rgba(8,7,5,.05) 55%,rgba(8,7,5,.12) 100%),
+          linear-gradient(to top,rgba(8,7,5,.96) 0%,rgba(8,7,5,.72) 35%,rgba(8,7,5,.28) 67%,rgba(8,7,5,.36) 100%);
+      }
+      .hero-inner{width:min(90vw,680px);padding:112px 0 68px}
       .hero-panel{max-width:none}
       .hero-kicker{font-size:11px;letter-spacing:.3em;margin-bottom:11px}
       .hero-kicker::before{width:32px}
       .anniv-text{font-size:14px;letter-spacing:.14em;margin-bottom:11px}
       .hero-copy .limited{font-size:clamp(24px,7vw,34px);line-height:1.55;letter-spacing:.07em}
-      .hero-price{margin:2px 0 14px}
-      .hero-price .num{font-size:clamp(82px,28vw,116px)}
-      .hero-price .prefix{font-size:21px}
-      .hero-price .unit{font-size:33px}
-      .hero-price .off{font-size:40px}
-      .coupon-note{font-size:11px;line-height:1.8;letter-spacing:.08em;margin-bottom:15px}
-      .plan-tags{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;margin-bottom:25px}
-      .plan-tags li{min-height:47px;padding:8px 10px;font-size:10.5px}
+      .hero-price{margin:4px 0 14px;padding:4px 2px 7px;overflow:visible;flex-wrap:nowrap;gap:5px}
+      .hero-price .price-main{overflow:visible;flex:none}
+      .hero-price .num{font-size:clamp(76px,23vw,98px);line-height:1;display:inline-block;padding:.03em .02em .06em;overflow:visible}
+      .hero-price .prefix{font-size:19px}
+      .hero-price .unit{font-size:30px}
+      .hero-price .off{font-size:34px;white-space:nowrap}
+      .coupon-note{max-width:355px;font-size:11.5px;line-height:1.9;letter-spacing:.075em;margin:0 0 22px;color:rgba(255,255,255,.88)}
+      .plan-tags{display:none}
       .btn-main{width:100%;min-height:58px;padding:0 20px;font-size:13px}
       .hero-microcopy{display:none}
       .scroll-cue{display:none}
@@ -683,20 +688,34 @@
       .concept-copy{padding:0}
       .section-heading{font-size:28px;line-height:1.65}
       .section-lead{font-size:14px;line-height:2}
-      .concept-visual{min-height:auto;display:grid;grid-template-columns:1fr .52fr;align-items:end;padding-bottom:22px}
-      .concept-image-main{position:relative;width:100%;height:auto;aspect-ratio:4/5;grid-column:1/-1;grid-row:1;background-position:center}
-      .concept-image-sub{position:relative;z-index:2;left:auto;bottom:auto;width:100%;aspect-ratio:4/5;grid-column:1;grid-row:1;margin:0 0 -22px -2px;align-self:end;max-width:42%;border:7px solid var(--ivory)}
-      .concept-stamp{z-index:3;right:2%;bottom:0;width:108px;height:108px;font-size:10px}
-      .concept-stamp strong{font-size:25px}
+      .concept-visual{min-height:auto;display:grid;grid-template-columns:1fr;align-items:end;padding-bottom:34px}
+      .concept-image-main{position:relative;width:100%;height:auto;aspect-ratio:4/5;grid-column:1;grid-row:1;background-position:center}
+      .concept-image-sub{position:relative;z-index:2;left:auto;bottom:auto;width:52%;aspect-ratio:4/5;grid-column:1;grid-row:1;margin:0 0 -34px -1px;align-self:end;border:6px solid var(--ivory);box-shadow:0 16px 38px rgba(33,27,17,.18)}
+      .concept-stamp{display:none}
 
-      .features{padding:0 0 82px}
-      .feature-grid{width:min(92vw,680px);grid-template-columns:1fr 1fr;border:none}
-      .feature{min-height:185px;border:1px solid var(--line)!important;margin:-1px 0 0 -1px;padding:24px 19px}
-      .feature:last-child{grid-column:1/-1;min-height:155px}
-      .feature .icon{width:38px;height:38px;margin-bottom:13px}
-      .feature-no{margin-bottom:12px}
-      .feature h3{font-size:14px}
-      .feature p{font-size:11.5px}
+      .features{padding:4px 0 86px}
+      .features-head{display:block;width:min(90vw,680px);margin:0 auto 28px;padding-top:8px}
+      .features-head .eyebrow{margin-bottom:10px}
+      .features-head h2{font-size:25px;line-height:1.62;letter-spacing:.08em;font-weight:500}
+      .feature-grid{width:min(90vw,680px);grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent}
+      .feature{
+        display:grid;
+        grid-template-columns:62px minmax(0,1fr);
+        grid-template-areas:"no title" "no text";
+        column-gap:20px;
+        min-height:auto;
+        margin:0;
+        padding:24px 4px 24px 0;
+        border:0!important;
+        border-bottom:1px solid var(--line)!important;
+        background:transparent;
+      }
+      .feature:last-child{grid-column:auto;border-bottom:0!important}
+      .feature:hover{background:transparent;transform:none}
+      .feature .icon{display:none}
+      .feature-no{grid-area:no;margin:1px 0 0;font-size:11px;letter-spacing:.16em;color:var(--gold-deep);line-height:1.5}
+      .feature h3{grid-area:title;font-size:15px;letter-spacing:.09em;font-weight:600;line-height:1.55;margin:0 0 7px}
+      .feature p{grid-area:text;font-size:12px;line-height:1.9;letter-spacing:.04em;color:var(--muted)}
 
       .plans{padding:92px 0 95px;background:var(--dark)}
       .plans-head{width:min(92vw,680px);margin-bottom:34px;display:block}
@@ -751,12 +770,13 @@
     }
 
     @media(max-width:430px){
-      .hero{min-height:820px}
-      .hero-inner{width:90vw;padding-bottom:76px}
+      .hero{min-height:790px}
+      .hero-inner{width:88vw;padding-bottom:66px}
       .hero-copy .limited{font-size:24px}
-      .hero-price .num{font-size:88px}
-      .hero-price .off{font-size:35px}
-      .plan-tags li{font-size:9.7px;letter-spacing:.02em}
+      .hero-price .num{font-size:80px}
+      .hero-price .prefix{font-size:18px}
+      .hero-price .unit{font-size:28px}
+      .hero-price .off{font-size:31px}
       .section-heading{font-size:25px}
       .feature{padding:22px 16px}
       .card,.card:nth-child(1),.card:nth-child(2),.card:nth-child(3){min-height:330px}
@@ -809,7 +829,7 @@
             <span class="off">OFF</span>
           </div>
 
-          <p class="coupon-note">秋旅応援・学生グループ・家族旅行・早割・記念日・連泊 — シーンで選べる全6プラン</p>
+          <p class="coupon-note">富士山ビュー×貸切サウナを、この秋だけの特別価格で。旅のスタイルに合わせて選べる全6プラン。</p>
 
           <ul class="plan-tags">
             <li>秋旅応援 最大30%OFF</li>
@@ -857,6 +877,11 @@
 
   <!-- Features -->
   <section class="features" id="access">
+    <div class="features-head reveal">
+      <p class="eyebrow">Why TOTONOI</p>
+      <h2>富士山の麓で味わう、<br>五つの特別な時間。</h2>
+    </div>
+
     <div class="feature-grid reveal">
       <article class="feature">
         <p class="feature-no">01 / PRIVATE</p>
