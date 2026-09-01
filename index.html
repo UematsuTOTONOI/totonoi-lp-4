@@ -112,6 +112,10 @@ a{text-decoration:none;color:inherit}
 .plans-title::after{background:linear-gradient(to left,transparent,var(--gold))}
 .plans-sub{text-align:center;font-size:clamp(13px,1.5vw,15px);letter-spacing:.1em;color:#5c5240;margin-bottom:44px}
 .badge{display:inline-block;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:12px;font-weight:700;letter-spacing:.06em;padding:5px 15px;border-radius:999px;margin-bottom:10px}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+.plan-card{position:relative;display:block;border-radius:10px;overflow:hidden;background:#fbf8f0;box-shadow:0 10px 30px rgba(40,30,10,.18);transition:transform .35s,box-shadow .35s}
+.plan-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(40,30,10,.26)}
+.plan-card img{width:100%;height:auto;display:block}
 /* Cards */
 .more,.plans{width:min(1160px,92vw);margin-left:auto;margin-right:auto}
 .more{padding-bottom:100px}
@@ -254,60 +258,24 @@ a{text-decoration:none;color:inherit}
   <section class="plans" id="autumn-plans">
     <h2 class="plans-title reveal">秋旅 応援キャンペーン</h2>
     <p class="plans-sub reveal">シーンに合わせて選べる、全6つのお得プラン</p>
-    <div class="card-grid">
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/263760/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/Autumn.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">最大30%OFF</span>
-          <h3>秋旅応援 特別プラン</h3>
-          <p>人数が増えるごとに割引率がUP。学生以外も誰でも使える、秋旅応援の目玉プランです</p>
-        </div>
-        <span class="circle">➜</span>
+    <div class="plan-grid">
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/263760/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/Autumn.jpg" alt="秋旅応援 特別プラン 最大30%OFF">
       </a>
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/261514/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/campfire.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">最大30%OFF</span>
-          <h3>学生グループ旅行応援プラン</h3>
-          <p>人数が増えるほどお得な素泊まりプラン。2名10%〜6名以上で最大30%OFF（学生証提示制）</p>
-        </div>
-        <span class="circle">➜</span>
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/261514/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/student.jpg" alt="学生グループ旅行応援プラン 最大30%OFF">
       </a>
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/261523/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/food.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">小学生以下無料</span>
-          <h3>家族旅行応援プラン</h3>
-          <p>山梨グルメBBQ付きの1泊2食プラン。ご家族での富士山旅行を応援します</p>
-        </div>
-        <span class="circle">➜</span>
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/261523/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/Family.jpg" alt="家族旅行応援プラン 小学生以下無料">
       </a>
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254459/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/middle.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">15%OFF</span>
-          <h3>早割プラン</h3>
-          <p>60日前までの早期予約でお得に。富士山ビュー×貸切サウナも楽しめます</p>
-        </div>
-        <span class="circle">➜</span>
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254459/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/early.jpg" alt="早割プラン 15%OFF">
       </a>
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254499/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/tonp.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">特典付き（1日2組限定）</span>
-          <h3>記念日旅行プラン</h3>
-          <p>バルーン・スパークリング・ケーキ付きで、大切な記念日を特別な一日に</p>
-        </div>
-        <span class="circle">➜</span>
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254499/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/Anniversary.jpg" alt="記念日旅行プラン 特典付き">
       </a>
-      <a class="card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254477/stay" target="_blank" rel="noopener">
-        <span class="bg" style="background-image:url('images/sauna.jpg')"></span>
-        <div class="card-body">
-          <span class="badge">2泊目以降20%OFF</span>
-          <h3>連泊プラン</h3>
-          <p>泊まるほどお得に。連泊でゆったりとした秋の富士山中湖時間を</p>
-        </div>
-        <span class="circle">➜</span>
+      <a class="plan-card reveal" href="https://reserve.489ban.net/client/g-totonoi/0/plan/id/254477/stay" target="_blank" rel="noopener">
+        <img loading="lazy" src="images/renpaku.jpg" alt="連泊プラン 2泊目以降20%OFF">
       </a>
     </div>
   </section>
