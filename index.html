@@ -542,9 +542,58 @@
     .copyright{text-align:center;font-family:var(--serif-en);font-size:10px;letter-spacing:.18em;color:#756f64;margin-top:38px}
 
     /* ---------------------------------
-       Mobile sticky CTA
+       Sticky CTA - desktop / mobile
     --------------------------------- */
-    .mobile-cta{display:none}
+    body{padding-bottom:96px}
+    .mobile-cta{
+      position:fixed;
+      z-index:120;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%);
+      width:min(680px,calc(100vw - 40px));
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:10px;
+      background:rgba(12,10,7,.95);
+      border:1px solid rgba(221,192,138,.3);
+      border-radius:4px;
+      box-shadow:0 12px 34px rgba(0,0,0,.3);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+    .mobile-cta-text{
+      flex:0 0 132px;
+      color:rgba(255,255,255,.82);
+      font-size:10px;
+      letter-spacing:.08em;
+      line-height:1.35;
+      text-align:center;
+    }
+    .mobile-cta-text strong{
+      display:block;
+      color:var(--gold-light);
+      font-family:var(--serif-en);
+      font-size:24px;
+      line-height:1.03;
+      letter-spacing:.03em;
+    }
+    .mobile-cta a{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      background:linear-gradient(135deg,#e6cc98,#b88f4c);
+      color:#1b160d;
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.12em;
+      transition:transform .25s,filter .25s;
+    }
+    .mobile-cta a:hover{transform:translateY(-1px);filter:brightness(1.04)}
 
     /* ---------------------------------
        Reveal motion
@@ -714,21 +763,19 @@
       .copyright{margin-top:28px}
 
       .mobile-cta{
-        position:fixed;
-        z-index:120;
         left:0;right:0;bottom:0;
-        display:flex;
-        align-items:center;
+        transform:none;
+        width:auto;
         gap:10px;
         padding:9px 10px calc(9px + env(safe-area-inset-bottom));
-        background:rgba(12,10,7,.95);
+        border:0;
         border-top:1px solid rgba(221,192,138,.28);
-        backdrop-filter:blur(14px);
-        -webkit-backdrop-filter:blur(14px);
+        border-radius:0;
+        box-shadow:none;
       }
-      .mobile-cta-text{min-width:92px;color:rgba(255,255,255,.82);font-size:9.5px;letter-spacing:.08em;line-height:1.35;text-align:center}
-      .mobile-cta-text strong{display:block;color:var(--gold-light);font-family:var(--serif-en);font-size:20px;line-height:1.05;letter-spacing:.03em}
-      .mobile-cta a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;background:linear-gradient(135deg,#e6cc98,#b88f4c);color:#1b160d;font-size:12px;font-weight:600;letter-spacing:.12em}
+      .mobile-cta-text{flex:0 0 92px;font-size:9.5px}
+      .mobile-cta-text strong{font-size:20px;line-height:1.05}
+      .mobile-cta a{min-height:48px;padding:0 12px;font-size:12px}
     }
 
     @media(max-width:430px){
@@ -765,7 +812,7 @@
     <a href="sauna.html">サウナ</a>
     <a href="activity.html">楽しみ方</a>
     <a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
-    <a class="btn-reserve" href="https://www.yamanashi-sauna-glamping.com/news/autumn_plan_list/" target="_blank" rel="noopener">ご予約はこちら</a>
+    <a class="btn-reserve" href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0" target="_blank" rel="noopener">ご予約はこちら</a>
   </nav>
 </header>
 
@@ -1020,7 +1067,7 @@
 <!-- Mobile sticky CTA -->
 <div class="mobile-cta" aria-label="秋旅キャンペーン予約導線">
   <span class="mobile-cta-text">秋旅キャンペーン<strong>30% OFF</strong>最大</span>
-  <a href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0" target="_blank" rel="noopener">お得なプランの空室をチェック☝</a>
+  <a href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0" target="_blank" rel="noopener">お得なプランと空室を見る</a>
 </div>
 
 <script>
