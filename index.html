@@ -445,16 +445,18 @@
     }
     .feature{
       position:relative;
-      min-height:208px;
-      padding:32px 24px 27px;
+      min-height:350px;
+      padding:18px 18px 24px;
       border-right:1px solid var(--line);
       background:rgba(255,255,255,.16);
-      transition:background .3s,transform .3s;
+      transition:background .3s,transform .3s,box-shadow .3s;
     }
     .feature:first-child{border-left:1px solid var(--line)}
-    .feature:hover{background:rgba(255,255,255,.52);transform:translateY(-3px)}
-    .feature-no{font-family:var(--serif-en);font-size:13px;letter-spacing:.18em;color:var(--gold);margin-bottom:19px}
-    .feature .icon{width:43px;height:43px;object-fit:contain;margin-bottom:18px;opacity:.82;filter:sepia(.22)}
+    .feature:hover{background:rgba(255,255,255,.52);transform:translateY(-3px);box-shadow:0 16px 34px rgba(33,27,17,.08)}
+    .feature-no{font-family:var(--serif-en);font-size:13px;letter-spacing:.18em;color:var(--gold);margin-bottom:14px}
+    .feature-media{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:#ddd2ba;margin-bottom:16px}
+    .feature-media img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s ease}
+    .feature:hover .feature-media img{transform:scale(1.04)}
     .feature h3{font-size:15px;letter-spacing:.1em;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.6}
     .feature p{font-size:12px;letter-spacing:.045em;color:var(--muted);line-height:1.8}
 
@@ -618,6 +620,7 @@
       .feature:nth-child(3){border-right:1px solid var(--line)}
       .feature:nth-child(n+4){border-top:1px solid var(--line)}
       .feature:nth-child(4){border-left:1px solid var(--line)}
+      .feature{min-height:336px}
       .card-grid{grid-template-columns:1fr 1fr}
       .card:nth-child(1){grid-column:1/-1;min-height:470px}
       .card:nth-child(2),.card:nth-child(3){margin-top:0;min-height:390px}
@@ -700,22 +703,25 @@
       .feature-grid{width:min(90vw,680px);grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent}
       .feature{
         display:grid;
-        grid-template-columns:62px minmax(0,1fr);
-        grid-template-areas:"no title" "no text";
-        column-gap:20px;
+        grid-template-columns:116px minmax(0,1fr);
+        grid-template-areas:"media no" "media title" "media text";
+        column-gap:16px;
+        align-items:start;
         min-height:auto;
         margin:0;
-        padding:24px 4px 24px 0;
+        padding:18px 0;
         border:0!important;
         border-bottom:1px solid var(--line)!important;
         background:transparent;
+        box-shadow:none;
       }
       .feature:last-child{grid-column:auto;border-bottom:0!important}
       .feature:hover{background:transparent;transform:none}
-      .feature .icon{display:none}
-      .feature-no{grid-area:no;margin:1px 0 0;font-size:11px;letter-spacing:.16em;color:var(--gold-deep);line-height:1.5}
+      .feature-media{grid-area:media;margin:0;height:100%;min-height:108px;border-radius:2px}
+      .feature-media img{height:100%}
+      .feature-no{grid-area:no;margin:1px 0 6px;font-size:10.5px;letter-spacing:.16em;color:var(--gold-deep);line-height:1.5}
       .feature h3{grid-area:title;font-size:15px;letter-spacing:.09em;font-weight:600;line-height:1.55;margin:0 0 7px}
-      .feature p{grid-area:text;font-size:12px;line-height:1.9;letter-spacing:.04em;color:var(--muted)}
+      .feature p{grid-area:text;font-size:12px;line-height:1.85;letter-spacing:.04em;color:var(--muted)}
 
       .plans{padding:92px 0 95px;background:var(--dark)}
       .plans-head{width:min(92vw,680px);margin-bottom:34px;display:block}
@@ -778,7 +784,7 @@
       .hero-price .unit{font-size:28px}
       .hero-price .off{font-size:31px}
       .section-heading{font-size:25px}
-      .feature{padding:22px 16px}
+      .feature{padding:18px 0}
       .card,.card:nth-child(1),.card:nth-child(2),.card:nth-child(3){min-height:330px}
       .bottom-price .limited{font-size:22px}
     }
@@ -885,35 +891,35 @@
     <div class="feature-grid reveal">
       <article class="feature">
         <p class="feature-no">01 / PRIVATE</p>
-        <img class="icon" src="images/13.png" alt="" loading="lazy">
+        <div class="feature-media"><img src="images/a15.jpg" alt="貸切サウナ" loading="lazy"></div>
         <h3>貸切サウナ</h3>
         <p>周りを気にせず、自然の中で“ととのう”贅沢を。</p>
       </article>
 
       <article class="feature">
         <p class="feature-no">02 / ACCESS</p>
-        <img class="icon" src="images/10.png" alt="" loading="lazy">
-        <h3>都心から好アクセス</h3>
-        <p>新宿から車で約90分。直行バスでもらくらく到着。</p>
+        <div class="feature-media"><img src="images/a17.jpg" alt="バスで90分" loading="lazy"></div>
+        <h3>バスで90分</h3>
+        <p>若者旅にも嬉しい、都心から直行バスでらくらく到着。</p>
       </article>
 
       <article class="feature">
         <p class="feature-no">03 / VIEW</p>
-        <img class="icon" src="images/11.png" alt="" loading="lazy">
+        <div class="feature-media"><img src="images/day-morning.jpg" alt="全室富士山ビュー" loading="lazy"></div>
         <h3>全室富士山ビュー</h3>
-        <p>お部屋やお風呂から、雄大な景色を独り占め。</p>
+        <p>お部屋やお庭から、雄大な富士山の景色を独り占め。</p>
       </article>
 
       <article class="feature">
         <p class="feature-no">04 / GARDEN</p>
-        <img class="icon" src="images/12.png" alt="" loading="lazy">
+        <div class="feature-media"><img src="images/a14.jpg" alt="広い専用ガーデン" loading="lazy"></div>
         <h3>広い専用ガーデン</h3>
-        <p>自然に囲まれたプライベート空間でのびのび。</p>
+        <p>自然に囲まれたプライベート空間で、思い思いの時間を。</p>
       </article>
 
       <article class="feature">
         <p class="feature-no">05 / EXPERIENCE</p>
-        <img class="icon" src="images/14.png" alt="" loading="lazy">
+        <div class="feature-media"><img src="images/a3.jpg" alt="豊富なオプション" loading="lazy"></div>
         <h3>豊富なオプション</h3>
         <p>飯盒炊飯やマシュマロなど、旅を彩るアウトドア体験。</p>
       </article>
