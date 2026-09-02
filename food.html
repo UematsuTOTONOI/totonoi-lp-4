@@ -51,9 +51,10 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:linear-gradient(to bottom,rgba(10,8,5,.85),rgba(10,8,5,.45) 70%,transparent);transition:background .3s}
 .header.scrolled{background:rgba(10,8,5,.92)}
-.logo{color:#fff;line-height:1.15;text-align:center}
+.logo{display:inline-flex;align-items:center;color:#fff;line-height:1.15;text-align:center}
 .logo .en{font-family:var(--serif-en);font-size:26px;letter-spacing:.32em;font-weight:600}
 .logo .jp{font-size:12px;letter-spacing:.42em;display:block}
+.logo img{display:block;width:170px;height:auto;object-fit:contain}
 .gnav{display:flex;align-items:center;gap:30px}
 .gnav a{color:#f4efe4;font-size:14px;letter-spacing:.18em}
 .btn-reserve{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#2b2010;font-size:14px;letter-spacing:.14em;padding:11px 26px;border-radius:4px;font-weight:600}
@@ -106,13 +107,14 @@ a{text-decoration:none;color:inherit}
   .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-toggle.open span:nth-child(2){opacity:0}
   .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .logo img{width:140px}
 }
 </style>
 </head>
 <body>
 
 <header class="header" id="header">
-  <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+  <a class="logo" href="index.html" aria-label="TOTONOI 富士山中湖 トップへ"><img src="images/logo.png" alt="Glamping Village TOTONOI Fujiyamanakako"></a>
   <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
   <nav class="gnav" id="gnav">
     <a href="index.html#autumn-plans">秋旅プラン</a>
@@ -213,7 +215,7 @@ a{text-decoration:none;color:inherit}
       <h2>自然の中で味わう、最高のグルメ体験を。</h2>
       <p>秋旅 応援キャンペーン開催中｜学生グループ・家族旅行・早割・記念日・連泊など全6プランから選べる、最大30%OFF</p>
       <p class="cta-note">※食材の仕入れ状況により、内容が変更となる場合がございます。</p>
-      <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0">空室を確認する ➜</a>
+      <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0" target="_blank" rel="noopener">空室を確認する ➜</a>
     </div>
   </section>
 
@@ -221,7 +223,7 @@ a{text-decoration:none;color:inherit}
 
 <footer class="footer">
   <div class="footer-inner">
-    <a class="logo" href="index.html"><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
+    <a class="logo" href="index.html" aria-label="TOTONOI 富士山中湖 トップへ"><img src="images/logo.png" alt="Glamping Village TOTONOI Fujiyamanakako"></a>
     <nav class="fnav">
       <a href="sauna.html">サウナ</a><a href="activity.html">楽しみ方</a><a href="privacy.html">プライバシーポリシー</a><a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
     </nav>
