@@ -8,6 +8,27 @@
   gtag('js', new Date());
   gtag('config', 'G-Y8CE68WYFG');
 </script>
+
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18289857179"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18289857179');
+</script>
+
+<!-- Event snippet for 予約ボタンのクリック conversion page -->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="https://reserve.489ban.net/"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'conversion', {'send_to': 'AW-18289857179/U5c8CInPw9AcEJulpJFE'});
+      });
+    });
+  });
+</script>
+
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -149,11 +170,12 @@ a{text-decoration:none;color:inherit}
   <a class="logo" href="index.html"><span class="jp">Glamping Village</span><span class="en">TOTONOI</span><span class="jp">富士山中湖</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
   <nav class="gnav" id="gnav">
+    <a href="index.html#autumn-plans">秋旅プラン</a>
     <a href="food.html">食事</a>
     <a href="sauna.html">サウナ</a>
     <a href="activity.html">楽しみ方</a>
     <a href="https://www.yamanashi-sauna-glamping.com/" target="_blank" rel="noopener">公式ホームページ</a>
-    <a class="btn-reserve" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">ご予約はこちら</a>
+    <a class="btn-reserve" href="https://reserve.489ban.net/client/g-totonoi/0/plan/stay?planTags%5B25007%5D=1&searchTagMode=0&keepTags=1&redirect=0" target="_blank" rel="noopener">ご予約はこちら</a>
   </nav>
 </header>
 
@@ -173,7 +195,7 @@ a{text-decoration:none;color:inherit}
           <span><span class="dot">◆</span>初心者にも安心</span>
         </div>
         <div class="hero-cta">
-          <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
+          <a class="btn-main" href="index.html#autumn-plans">空室を確認する <span class="arrow">➜</span></a>
         </div>
       </div>
     </div>
@@ -245,9 +267,9 @@ a{text-decoration:none;color:inherit}
     <span class="cta-bg"></span>
     <div class="bottom-inner reveal">
       <h2>富士山を望む、極上のプライベートサウナへ。</h2>
-      <p>本ページ限定 先行公開 1人5,000円OFF｜クーポンコード：TTNI42</p>
+      <p>秋旅 応援キャンペーン開催中｜学生グループ・家族旅行・早割・記念日・連泊など全6プランから選べる、最大30%OFF</p>
       <div class="hero-cta">
-        <a class="btn-main" href="https://reserve.489ban.net/client/g-totonoi/0/detail/606610" target="_blank" rel="noopener">空室を確認する <span class="arrow">➜</span></a>
+        <a class="btn-main" href="index.html#autumn-plans">空室を確認する <span class="arrow">➜</span></a>
       </div>
     </div>
   </section>
